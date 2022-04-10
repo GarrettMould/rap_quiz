@@ -1,0 +1,33 @@
+.container {
+  width: 40%;
+}
+
+.button {
+  background-color: black;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.navItem:hover {
+  font-weight: 500;
+}
+
+.navItem:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #000000;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.navItem:hover:after {
+  transform: scaleX(1);
+}

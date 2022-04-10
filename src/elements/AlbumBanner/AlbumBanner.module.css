@@ -1,0 +1,16 @@
+.imageWrapper {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album {
+  max-width: 33vw;
+}
+
+.albumRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

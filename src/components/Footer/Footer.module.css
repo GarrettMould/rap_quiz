@@ -1,0 +1,55 @@
+/* Tablet and Desktop */
+.attribution {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.container {
+  padding: 1% 5%;
+  background-color: white;
+  border-top: 3px solid black;
+}
+
+.navbarHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.siteTitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.icon {
+  margin-left: 10%;
+}
+
+/* Mobile */
+
+.attributionMobile {
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.container {
+  padding: 1% 5%;
+  background-color: white;
+  border-top: 3px solid black;
+}
+
+.navbarHeaderMobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100px;
+}
+
+.iconMobile {
+  margin-left: 10%;
+}

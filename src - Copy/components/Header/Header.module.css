@@ -1,0 +1,15 @@
+.container {
+  padding: 1% 5%;
+  background-color: white;
+  border-bottom: 3px solid black;
+}
+
+.navbarHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.siteTitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
