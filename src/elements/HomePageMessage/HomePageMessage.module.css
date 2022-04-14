@@ -22,6 +22,7 @@
   background-color: black;
   outline: none;
   border: 2px solid transparent;
+  font-weight: 600;
 }
 
 .button:hover,
@@ -34,7 +35,7 @@
 
 /* Mobile */
 
-.container {
+.containerMobile {
   width: 100%;
   margin-right: 10%;
 }
@@ -44,20 +45,21 @@
   line-height: 4rem;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 
 .subTextMobile {
   font-size: 1.2rem;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 
 .buttonMobile {
   background-color: black;
   outline: none;
   border: 2px solid transparent;
+  font-weight: 600;
 }
 
 .buttonMobile:hover,

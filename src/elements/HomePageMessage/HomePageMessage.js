@@ -10,7 +10,7 @@ const HomePageMessage = (props) => {
       {(matches) =>
         matches.small ? (
           <div className={classes.containerMobile}>
-            <Container className="d-flex flex-column align-items-center">
+            <Container className="d-flex flex-column align-items-center mb-4 mt-3">
               <div className={classes.mainTextMobile}>
                 Welcome to Kanye Quiz
               </div>

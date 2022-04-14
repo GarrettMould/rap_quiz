@@ -24,6 +24,17 @@ import KanyeWestViolentCrimes from "../Audio/Violent_Crimes.mp3";
 import KanyeWestNoChildLeftBehind from "../Audio/No_Child_Left_Behind.mp3";
 import KanyeWestFamilyBusiness from "../Audio/Family_Business.mp3";
 import KanyeWestRunaway from "../Audio/Runaway.mp3";
+import KanyeWestAllMine from "../Audio/All_Mine.mp3";
+import KanyeWestHurricane from "../Audio/Hurricane.mp3";
+import KanyeWestHomecoming from "../Audio/Homecoming.mp3";
+import KanyeWestWeDontCare from "../Audio/We_Don't_Care.mp3";
+import KanyeWestOnSight from "../Audio/On_Sight.mp3";
+import KanyeWestNewSlaves from "../Audio/New_Slaves.mp3";
+import KanyeWestWelcomeToHeartbreak from "../Audio/Welcome_to_Heartbreak.mp3";
+import KanyeWestMoon from "../Audio/Moon.mp3";
+import KanyeWestOffTheGrid from "../Audio/Off_the_Grid.mp3";
+import KanyeWestMurderToExcellence from "../Audio/Murder_to_Excellence.mp3";
+import KanyeWestStreetLights from "../Audio/Street_Lights.mp3";
 
 export const catalog_kanye_west = [
   album_kanye_west_collegedropout,
@@ -51,6 +62,16 @@ export const audioSources = [
   KanyeWestFeedback,
   KanyeWestNewDay,
   KanyeWestCold,
+  KanyeWestAllMine,
+  KanyeWestHurricane,
+  KanyeWestHomecoming,
+  KanyeWestWeDontCare,
+  KanyeWestOnSight,
+  KanyeWestNewSlaves,
+  KanyeWestStreetLights,
+  KanyeWestMoon,
+  KanyeWestOffTheGrid,
+  KanyeWestMurderToExcellence,
 ];
 
 export const questions = [
@@ -165,4 +186,122 @@ export const questions = [
       { answerText: "To the World", isCorrect: false },
     ],
   },
+  {
+    id: 10,
+    difficulty: "Insane",
+    audio: KanyeWestAllMine,
+    answerOptions: [
+      { answerText: "All Day", isCorrect: false },
+      { answerText: "Wouldn't Leave", isCorrect: false },
+      { answerText: "All Mine", isCorrect: true },
+      { answerText: "No Mistakes", isCorrect: false },
+    ],
+  },
+  {
+    id: 10,
+    difficulty: "Insane",
+    audio: KanyeWestHurricane,
+    answerOptions: [
+      { answerText: "Hurricane", isCorrect: true },
+      { answerText: "Jail", isCorrect: false },
+      { answerText: "Jesus Lord", isCorrect: true },
+      { answerText: "God Breathed", isCorrect: false },
+    ],
+  },
+  {
+    id: 11,
+    difficulty: "Insane",
+    audio: KanyeWestHomecoming,
+    answerOptions: [
+      { answerText: "Barry Bonds", isCorrect: false },
+      { answerText: "We Don't Care", isCorrect: false },
+      { answerText: "Champion", isCorrect: false },
+      { answerText: "Homecoming", isCorrect: true },
+    ],
+  },
+  {
+    id: 12,
+    difficulty: "Insane",
+    audio: KanyeWestWeDontCare,
+    answerOptions: [
+      { answerText: "I'll Fly Away", isCorrect: false },
+      { answerText: "Never Let Me Down", isCorrect: false },
+      { answerText: "We Don't Care", isCorrect: true },
+      { answerText: "Touch the Sky", isCorrect: false },
+    ],
+  },
+  {
+    id: 13,
+    difficulty: "Insane",
+    audio: KanyeWestOnSight,
+    answerOptions: [
+      { answerText: "On Sight", isCorrect: true },
+      { answerText: "I Am a God", isCorrect: false },
+      { answerText: "I'm In It", isCorrect: false },
+      { answerText: "New Slaves", isCorrect: false },
+    ],
+  },
+  {
+    id: 14,
+    difficulty: "Insane",
+    audio: KanyeWestNewSlaves,
+    answerOptions: [
+      { answerText: "New Slaves", isCorrect: true },
+      { answerText: "Black Skinhead", isCorrect: false },
+      { answerText: "Blood on the Leaves", isCorrect: false },
+      { answerText: "Praise God", isCorrect: false },
+    ],
+  },
+  {
+    id: 15,
+    difficulty: "Insane",
+    audio: KanyeWestStreetLights,
+    answerOptions: [
+      { answerText: "Heartless", isCorrect: false },
+      { answerText: "Welcome to Heartbreak", isCorrect: false },
+      { answerText: "Coldest Winter", isCorrect: false },
+      { answerText: "Street Lights", isCorrect: true },
+    ],
+  },
+  {
+    id: 16,
+    difficulty: "Insane",
+    audio: KanyeWestMoon,
+    answerOptions: [
+      { answerText: "Junya", isCorrect: false },
+      { answerText: "Reborn", isCorrect: false },
+      { answerText: "Moon", isCorrect: true },
+      { answerText: "New Again", isCorrect: false },
+    ],
+  },
+  {
+    id: 17,
+    difficulty: "Insane",
+    audio: KanyeWestOffTheGrid,
+    answerOptions: [
+      { answerText: "Off the Grid", isCorrect: true },
+      { answerText: "Junya", isCorrect: false },
+      { answerText: "Keep My Spirit Alive", isCorrect: false },
+      { answerText: "Remote Control", isCorrect: false },
+    ],
+  },
+  {
+    id: 18,
+    difficulty: "Insane",
+    audio: KanyeWestMurderToExcellence,
+    answerOptions: [
+      { answerText: "Lift Off", isCorrect: false },
+      { answerText: "Murder to Excellence", isCorrect: true },
+      { answerText: "Gotta Have It", isCorrect: false },
+      { answerText: "Who Gon Stop Me", isCorrect: false },
+    ],
+  },
 ];
+
+const shuffled = questions.sort(() => 0.5 - Math.random());
+
+export const questionSet = shuffled.slice(0, 10);
+
+console.log(questionSet);
+
+export let audio = questionSet.map((a) => a.audio);

@@ -4,6 +4,18 @@
   height: 85vh;
 }
 
+.containerTrue {
+  padding: 5%;
+  height: 85vh;
+  background-color: #23c551b9;
+}
+
+.containerFalse {
+  padding: 5%;
+  height: 85vh;
+  background-color: #f84f31be;
+}
+
 .rowOne {
   display: flex;
   justify-content: space-between;
@@ -18,7 +30,7 @@
   background: white;
   border: 4px solid black;
   width: 50%;
-  height: 250px;
+  height: 280px;
 }
 
 .scoreCardFormat {
@@ -33,21 +45,23 @@
   color: black;
   font-weight: 500;
   font-size: 1.5rem;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
 }
 
 .instructionsTitle {
   color: black;
-  font-weight: 500;
-  font-size: 1.5rem;
-  padding-bottom: 2%;
+  font-weight: 600;
+  font-size: 1.7rem;
+  padding-bottom: 3%;
 }
 
 .instructionsMessage {
   text-align: center;
   width: 80%;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 2.4rem;
 }
 
 .totalScore {
@@ -67,6 +81,7 @@
   background-color: black;
   outline: none;
   border: 2px solid transparent;
+  font-weight: 600;
 }
 
 .button:hover,
@@ -77,6 +92,9 @@
 }
 
 .btnPlay {
+  width: 200px;
+  font-size: 1.1rem;
+  font-weight: 600;
   background-color: black;
   border-radius: none;
   outline: none;
@@ -111,6 +129,9 @@
   font-weight: 600;
 }
 
+.light {
+  font-weight: 400;
+}
 .timerContainer {
   display: flex;
   justify-content: center;
@@ -129,7 +150,7 @@
   background: white;
   border: 4px solid black;
   width: 80%;
-  height: 320px;
+  height: 350px;
 }
 
 .scoreCardFormatMobile {
@@ -142,7 +163,7 @@
 
 .finishedMessageMobile {
   color: black;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   padding-bottom: 3%;
 }
@@ -155,7 +176,7 @@
 
 .instructionsTitleMobile {
   color: black;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   padding-bottom: 3%;
 }
@@ -166,6 +187,7 @@
   color: black;
   font-size: 1rem;
   padding-bottom: 3%;
+  line-height: 2rem;
 }
 
 /* Answer Option Buttons */
@@ -191,6 +213,14 @@
   width: 100%;
   margin: 1%;
   height: 70px;
+  background-color: black;
+  outline: none;
+  border: 2px solid transparent;
+  font-weight: 600;
+}
+
+.buttonMobile:hover,
+.buttonMobile:focus {
   background-color: black;
   outline: none;
   border: 2px solid transparent;

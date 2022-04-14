@@ -7,6 +7,7 @@
 .button {
   background-color: black;
   outline: none;
+  font-weight: 600;
   border: 2px solid transparent;
 }
 
@@ -18,8 +19,12 @@
   border: 2px solid black;
 }
 
+.navItem {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
 .navItem:hover {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .navItem:after {
@@ -43,6 +48,7 @@
   height: 20px;
   width: 50px;
   font-size: 0.5rem;
+  font-weight: 600;
   background-color: black;
   outline: none;
   border: 2px solid transparent;
@@ -57,10 +63,11 @@
 }
 
 .navItemMobile {
+  font-weight: 600;
   font-size: 0.6rem;
 }
 .navItemMobile:hover {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .navItemMobile:after {

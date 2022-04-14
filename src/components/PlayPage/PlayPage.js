@@ -8,22 +8,24 @@ import {
   ButtonGroup,
   Card,
 } from "react-bootstrap";
-import { Play } from "phosphor-react";
+import { Play, Check, X, HandEye } from "phosphor-react";
 import { Howl, Howler } from "howler";
 import ReactHowler from "react-howler";
 import { audioSources } from "../../Sharede/Shared";
 import Countdown from "react-countdown";
 import BtnSubmit from "../../elements/BtnSubmit/BtnSubmit";
-import { questions } from "../../Sharede/Shared";
+import { questions, questionSet, audio } from "../../Sharede/Shared";
 import classes from "./PlayPage.module.css";
 
 const PlayPage = (props) => {
   //Setting default state
   const [playing, setPlaying] = useState(false);
+  const [songPlaying, setSongPlaying] = useState(true);
   const [rowTwoDisplay, setRowTwoDisplay] = useState("startMenu");
   const [round, setRound] = useState(0);
   const [score, setScore] = useState(0);
-  const [showScore, setShowScore] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("grey");
+  const [isCorrect, setIsCorrect] = useState(null);
 
   //FUNCTION: start a new game
   const startGame = () => {
@@ -46,8 +48,14 @@ const PlayPage = (props) => {
 
   // Countdown Handle Start Function
   const handleStart = () => clockRef.current.start();
+
+  // Countdown Handle Pause Function
+  const handlePause = () => clockRef.current.stop();
+
   // Array of audio sources for each question
-  const sources = audioSources;
+  const sources = audio;
+
+  // Conditionally set background color
 
   // Conditionally Set RowTwo Display
   var display;
@@ -100,7 +108,7 @@ const PlayPage = (props) => {
             <ButtonGroup className={classes.groupMobile}>
               <Container>
                 <ReactHowler
-                  playing={true}
+                  playing={songPlaying ? true : false}
                   // When the sources are swapped we'll pass a new
                   // src prop into ReactHowler which will destroy our
                   // currently playing Howler.js and initialize
@@ -108,10 +116,10 @@ const PlayPage = (props) => {
                   src={sources[round]}
                 />
                 <div className="d-flex flex-column justify-content-center mt-5">
-                  {questions[round].answerOptions.map((answerOption) => (
+                  {questionSet[round].answerOptions.map((answerOption) => (
                     <Button
                       className={classes.buttonMobile}
-                      onClick={() => nextRound(answerOption.isCorrect)}
+                      onClick={() => checkAnswer(answerOption.isCorrect)}
                     >
                       {answerOption.answerText}
                     </Button>
@@ -131,10 +139,11 @@ const PlayPage = (props) => {
                   src={sources[round]}
                 />
                 <div className="d-flex justify-content-center">
-                  {questions[round].answerOptions.map((answerOption) => (
+                  {questionSet[round].answerOptions.map((answerOption, i) => (
                     <Button
                       className={classes.button}
-                      onClick={() => nextRound(answerOption.isCorrect)}
+                      id={i}
+                      onClick={(e) => checkAnswer(answerOption.isCorrect, e)}
                     >
                       {answerOption.answerText}
                     </Button>
@@ -186,25 +195,46 @@ const PlayPage = (props) => {
     );
   }
 
-  // Check if Answer is Correct / Update Score / Advance to Next Round or End Game
-  const nextRound = (isCorrect) => {
-    if (isCorrect === true) {
+  // FUNCTION: Check if the selected answer is true or false
+
+  const checkAnswer = (isCorrect) => {
+    if (isCorrect == true) {
+      setIsCorrect(true);
       setScore(score + 1);
+    } else if (isCorrect == false) {
+      setIsCorrect(false);
     }
 
-    const nextRound = round + 1;
+    setSongPlaying(false);
+    handlePause();
 
-    if (nextRound < questions.length) {
-      setRound(round + 1);
-      handleStart();
-    } else {
-      setPlaying(false);
-      setRowTwoDisplay("scoreMenu");
-    }
+    // FUNCTION: Move onto next round after two seconds
+    setTimeout(() => {
+      setIsCorrect(null);
+      setSongPlaying(true);
+      const nextRound = round + 1;
+
+      if (nextRound < questionSet.length) {
+        setRound(round + 1);
+        handleStart();
+      } else {
+        setPlaying(false);
+        setRowTwoDisplay("scoreMenu");
+      }
+    }, 1000);
   };
+  // Check if Answer is Correct / Update Score / Advance to Next Round or End Game
 
   return (
-    <div className={classes.container}>
+    <div
+      className={
+        isCorrect == true
+          ? classes.containerTrue
+          : isCorrect == false
+          ? classes.containerFalse
+          : classes.container
+      }
+    >
       {playing ? (
         <Media queries={{ small: { maxWidth: 599 } }}>
           {(matches) =>
@@ -214,16 +244,16 @@ const PlayPage = (props) => {
                   <div className={classes.roundContainerMobile}>
                     <div>
                       Round: <br></br>
-                      {round + 1}
-                      <span>/</span>10
+                      <span className={classes.light}>{round + 1}/10</span>
                     </div>
                   </div>
                   <div className={classes.timerContainerMobile}>
                     <div>
                       <Countdown
                         ref={clockRef}
+                        controlled={false}
                         intervalDelay={1000}
-                        onComplete={nextRound}
+                        onComplete={checkAnswer}
                         date={Date.now() + 8000}
                         autoStart={true}
                         renderer={(props) => <div>{props.seconds}</div>}
@@ -232,7 +262,8 @@ const PlayPage = (props) => {
                   </div>
                   <div className={classes.difficultyContainerMobile}>
                     <div>
-                      Level: <br></br> {questions[round].difficulty}
+                      Score: <br></br>{" "}
+                      <span className={classes.light}>{score}</span>
                     </div>
                   </div>
                 </div>
@@ -241,8 +272,8 @@ const PlayPage = (props) => {
               <div className={classes.rowOne}>
                 <div className={classes.roundContainer}>
                   <div>
-                    Round: {round + 1}
-                    <span>/</span>10
+                    Round: <br></br>
+                    <span className={classes.light}>{round + 1}/10</span>
                   </div>
                 </div>
                 <div className={classes.timerContainer}>
@@ -250,7 +281,7 @@ const PlayPage = (props) => {
                     <Countdown
                       ref={clockRef}
                       intervalDelay={1000}
-                      onComplete={nextRound}
+                      onComplete={checkAnswer}
                       date={Date.now() + 8000}
                       autoStart={true}
                       renderer={(props) => <div>{props.seconds}</div>}
@@ -258,7 +289,10 @@ const PlayPage = (props) => {
                   </div>
                 </div>
                 <div className={classes.difficultyContainer}>
-                  <div>Level: {questions[round].difficulty}</div>
+                  <div>
+                    Score: <br></br>{" "}
+                    <span className={classes.light}>{score}</span>
+                  </div>
                 </div>
               </div>
             )

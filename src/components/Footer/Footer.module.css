@@ -1,12 +1,11 @@
 /* Tablet and Desktop */
 .attribution {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
 .container {
-  padding: 1% 5%;
-  background-color: white;
+  padding: 3% 5%;
   border-top: 3px solid black;
 }
 
@@ -29,12 +28,6 @@
 .attributionMobile {
   font-size: 0.65rem;
   font-weight: 500;
-}
-
-.container {
-  padding: 1% 5%;
-  background-color: white;
-  border-top: 3px solid black;
 }
 
 .navbarHeaderMobile {

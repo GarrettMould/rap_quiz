@@ -1,0 +1,71 @@
+/* Tablet and Desktop */
+.container {
+  width: 50%;
+  margin-right: 10%;
+}
+
+.mainText {
+  font-size: 4rem;
+  line-height: 5.5rem;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+
+.subText {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 4%;
+}
+
+.button {
+  width: 30%;
+  background-color: black;
+  outline: none;
+  border: 2px solid transparent;
+  font-weight: 600;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* Mobile */
+
+.containerMobile {
+  width: 100%;
+  margin-right: 10%;
+}
+
+.mainTextMobile {
+  font-size: 3rem;
+  line-height: 4rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 7%;
+}
+
+.subTextMobile {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 7%;
+}
+
+.buttonMobile {
+  background-color: black;
+  outline: none;
+  border: 2px solid transparent;
+  font-weight: 600;
+}
+
+.buttonMobile:hover,
+.buttonMobile:active,
+.buttonMobile:focus {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
