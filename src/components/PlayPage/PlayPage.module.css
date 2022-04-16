@@ -4,18 +4,6 @@
   height: 85vh;
 }
 
-.containerTrue {
-  padding: 5%;
-  height: 85vh;
-  background-color: #23c551b9;
-}
-
-.containerFalse {
-  padding: 5%;
-  height: 85vh;
-  background-color: #f84f31be;
-}
-
 .rowOne {
   display: flex;
   justify-content: space-between;
@@ -80,7 +68,33 @@
   height: 150px;
   background-color: black;
   outline: none;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
+  font-weight: 600;
+}
+
+.buttonCorrect,
+.buttonCorrect:hover,
+.buttonCorrect:focus,
+.buttonCorrect:active {
+  width: 20%;
+  margin: 1%;
+  height: 150px;
+  background-color: #23c551b9;
+  outline: none;
+  border: 3px solid transparent;
+  font-weight: 600;
+}
+
+.buttonIncorrect,
+.buttonIncorrect:hover,
+.buttonIncorrect:focus,
+.buttonIncorrect:active {
+  width: 20%;
+  margin: 1%;
+  height: 150px;
+  background-color: #f84f31be;
+  outline: none;
+  border: 3px solid transparent;
   font-weight: 600;
 }
 
@@ -138,8 +152,9 @@
   align-items: center;
   height: 100px;
   width: 100px;
-  background-color: #c4c4c4;
-  border-radius: 10%;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 8%;
 }
 
 /* MOBILE */
@@ -215,6 +230,32 @@
   height: 70px;
   background-color: black;
   outline: none;
+  border: 3px solid transparent;
+  font-weight: 600;
+}
+
+.buttonCorrectMobile,
+.buttonCorrectMobile:hover,
+.buttonCorrectMobile:focus,
+.buttonCorrectMobile:active {
+  width: 100%;
+  margin: 1%;
+  height: 70px;
+  background-color: #23c551b9;
+  outline: none;
+  border: 3px solid transparent;
+  font-weight: 600;
+}
+
+.buttonIncorrectMobile,
+.buttonIncorrectMobile:hover,
+.buttonIncorrectMobile:focus,
+.buttonIncorrectMobile:active {
+  width: 100%;
+  margin: 1%;
+  height: 70px;
+  background-color: #f84f31be;
+  outline: none;
   border: 2px solid transparent;
   font-weight: 600;
 }
@@ -243,6 +284,18 @@
   align-items: center;
   height: 60px;
   width: 60px;
-  background-color: #c4c4c4;
-  border-radius: 10%;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 8%;
+}
+
+.timerContainerMobileIncorrect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: #f84f31be;
+  border: 3px solid black;
+  border-radius: 8%;
 }

@@ -8,12 +8,10 @@ import {
   ButtonGroup,
   Card,
 } from "react-bootstrap";
-import { Play, Check, X, HandEye } from "phosphor-react";
-import { Howl, Howler } from "howler";
+
 import ReactHowler from "react-howler";
-import { audioSources } from "../../Sharede/Shared";
-import Countdown from "react-countdown";
-import BtnSubmit from "../../elements/BtnSubmit/BtnSubmit";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import Countdown, { calcTimeDelta } from "react-countdown";
 import { questions, questionSet, audio } from "../../Sharede/Shared";
 import classes from "./PlayPage.module.css";
 
@@ -23,8 +21,9 @@ const PlayPage = (props) => {
   const [songPlaying, setSongPlaying] = useState(true);
   const [rowTwoDisplay, setRowTwoDisplay] = useState("startMenu");
   const [round, setRound] = useState(0);
+  const [timeRemaining, setTimeRemaining] = useState(null);
   const [score, setScore] = useState(0);
-  const [backgroundColor, setBackgroundColor] = useState("grey");
+  const [selectedID, setSelectedID] = useState(2);
   const [isCorrect, setIsCorrect] = useState(null);
 
   //FUNCTION: start a new game
@@ -108,7 +107,7 @@ const PlayPage = (props) => {
             <ButtonGroup className={classes.groupMobile}>
               <Container>
                 <ReactHowler
-                  playing={songPlaying ? true : false}
+                  playing={songPlaying === true ? true : false}
                   // When the sources are swapped we'll pass a new
                   // src prop into ReactHowler which will destroy our
                   // currently playing Howler.js and initialize
@@ -116,10 +115,17 @@ const PlayPage = (props) => {
                   src={sources[round]}
                 />
                 <div className="d-flex flex-column justify-content-center mt-5">
-                  {questionSet[round].answerOptions.map((answerOption) => (
+                  {questionSet[round].answerOptions.map((answerOption, i) => (
                     <Button
-                      className={classes.buttonMobile}
-                      onClick={() => checkAnswer(answerOption.isCorrect)}
+                      className={
+                        isCorrect == true && selectedID == i
+                          ? classes.buttonCorrectMobile
+                          : isCorrect == false && selectedID == i
+                          ? classes.buttonIncorrectMobile
+                          : classes.buttonMobile
+                      }
+                      id={i}
+                      onClick={(e) => checkAnswer(answerOption.isCorrect, e)}
                     >
                       {answerOption.answerText}
                     </Button>
@@ -141,7 +147,13 @@ const PlayPage = (props) => {
                 <div className="d-flex justify-content-center">
                   {questionSet[round].answerOptions.map((answerOption, i) => (
                     <Button
-                      className={classes.button}
+                      className={
+                        isCorrect == true && selectedID == i
+                          ? classes.buttonCorrect
+                          : isCorrect == false && selectedID == i
+                          ? classes.buttonIncorrect
+                          : classes.button
+                      }
                       id={i}
                       onClick={(e) => checkAnswer(answerOption.isCorrect, e)}
                     >
@@ -193,11 +205,48 @@ const PlayPage = (props) => {
         }
       </Media>
     );
+  } else if (rowTwoDisplay === "correctAnswer") {
+    display = (
+      <Media queries={{ small: { maxWidth: 599 } }}>
+        {(matches) =>
+          matches.small ? (
+            <Card className={classes.scoreCardMobile}>
+              <div className={classes.scoreCardFormatMobile}>
+                <div className={classes.finishedMessageMobile}>
+                  All Finished!
+                </div>
+                <div className={classes.totalScoreMobile}>
+                  Total Score: {score} / 10
+                </div>
+                <div className={classes.buttonRow}>
+                  <Button onClick={playAgain} className={classes.btnPlay}>
+                    Play Again
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          ) : (
+            <Card className={classes.scoreCard}>
+              <div className={classes.scoreCardFormat}>
+                <div className={classes.finishedMessage}>All Finished!</div>
+                <div className={classes.totalScore}>
+                  Total Score: {score} / 10
+                </div>
+                <div className={classes.buttonRow}>
+                  <Button onClick={playAgain} className={classes.btnPlay}>
+                    Play Again
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          )
+        }
+      </Media>
+    );
   }
+  // FUNCTION: Next Round (When timer runs down)
 
-  // FUNCTION: Check if the selected answer is true or false
-
-  const checkAnswer = (isCorrect) => {
+  const nextRound = () => {
     if (isCorrect == true) {
       setIsCorrect(true);
       setScore(score + 1);
@@ -210,6 +259,39 @@ const PlayPage = (props) => {
 
     // FUNCTION: Move onto next round after two seconds
     setTimeout(() => {
+      setRowTwoDisplay("playing");
+      setIsCorrect(null);
+      setSongPlaying(true);
+      const nextRound = round + 1;
+
+      if (nextRound < questionSet.length) {
+        setRound(round + 1);
+        handleStart();
+      } else {
+        setPlaying(false);
+        setRowTwoDisplay("scoreMenu");
+      }
+    }, 0);
+  };
+  // FUNCTION: Check if the selected answer is true or false
+
+  const checkAnswer = (isCorrect, e) => {
+    var target = e.currentTarget.id;
+    setSelectedID(target);
+
+    if (isCorrect == true) {
+      setIsCorrect(true);
+      setScore(score + 1);
+    } else if (isCorrect == false) {
+      setIsCorrect(false);
+    }
+
+    setSongPlaying(false);
+    handlePause();
+
+    // FUNCTION: Move onto next round after two seconds
+    setTimeout(() => {
+      setRowTwoDisplay("playing");
       setIsCorrect(null);
       setSongPlaying(true);
       const nextRound = round + 1;
@@ -226,15 +308,7 @@ const PlayPage = (props) => {
   // Check if Answer is Correct / Update Score / Advance to Next Round or End Game
 
   return (
-    <div
-      className={
-        isCorrect == true
-          ? classes.containerTrue
-          : isCorrect == false
-          ? classes.containerFalse
-          : classes.container
-      }
-    >
+    <div className={classes.container}>
       {playing ? (
         <Media queries={{ small: { maxWidth: 599 } }}>
           {(matches) =>
@@ -253,10 +327,12 @@ const PlayPage = (props) => {
                         ref={clockRef}
                         controlled={false}
                         intervalDelay={1000}
-                        onComplete={checkAnswer}
+                        onComplete={nextRound}
                         date={Date.now() + 8000}
                         autoStart={true}
-                        renderer={(props) => <div>{props.seconds}</div>}
+                        renderer={(props) => {
+                          return <div>{props.seconds}</div>;
+                        }}
                       />
                     </div>
                   </div>
@@ -280,11 +356,14 @@ const PlayPage = (props) => {
                   <div>
                     <Countdown
                       ref={clockRef}
+                      controlled={false}
                       intervalDelay={1000}
-                      onComplete={checkAnswer}
+                      onComplete={nextRound}
                       date={Date.now() + 8000}
                       autoStart={true}
-                      renderer={(props) => <div>{props.seconds}</div>}
+                      renderer={(props) => {
+                        return <div>{props.seconds}</div>;
+                      }}
                     />
                   </div>
                 </div>
