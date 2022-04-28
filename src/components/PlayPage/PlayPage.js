@@ -13,6 +13,7 @@ import ReactHowler from "react-howler";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import Countdown, { calcTimeDelta } from "react-countdown";
 import { questions, questionSet, audio } from "../../Sharede/Shared";
+import HeaderBorder from "../../elements/HeaderBorder/HeaderBorder";
 import classes from "./PlayPage.module.css";
 
 const PlayPage = (props) => {
@@ -114,7 +115,7 @@ const PlayPage = (props) => {
                   // a new Howler.js instance
                   src={sources[round]}
                 />
-                <div className="d-flex flex-column justify-content-center mt-5">
+                <div className={classes.centerButtonsMobile}>
                   {questionSet[round].answerOptions.map((answerOption, i) => (
                     <Button
                       className={
@@ -144,7 +145,7 @@ const PlayPage = (props) => {
                   // a new Howler.js instance
                   src={sources[round]}
                 />
-                <div className="d-flex justify-content-center">
+                <div className={classes.centerButtons}>
                   {questionSet[round].answerOptions.map((answerOption, i) => (
                     <Button
                       className={
@@ -308,20 +309,53 @@ const PlayPage = (props) => {
   // Check if Answer is Correct / Update Score / Advance to Next Round or End Game
 
   return (
-    <div className={classes.container}>
-      {playing ? (
-        <Media queries={{ small: { maxWidth: 599 } }}>
-          {(matches) =>
-            matches.small ? (
-              <div className={classes.rowOneContainer}>
-                <div className={classes.rowOneMobile}>
-                  <div className={classes.roundContainerMobile}>
+    <>
+      <HeaderBorder></HeaderBorder>
+      <div className={classes.container}>
+        {playing ? (
+          <Media queries={{ small: { maxWidth: 599 } }}>
+            {(matches) =>
+              matches.small ? (
+                <div className={classes.rowOneContainer}>
+                  <div className={classes.rowOneMobile}>
+                    <div className={classes.roundContainerMobile}>
+                      <div>
+                        Round: <br></br>
+                        <span className={classes.light}>{round + 1}/10</span>
+                      </div>
+                    </div>
+                    <div className={classes.timerContainerMobile}>
+                      <div>
+                        <Countdown
+                          ref={clockRef}
+                          controlled={false}
+                          intervalDelay={1000}
+                          onComplete={nextRound}
+                          date={Date.now() + 8000}
+                          autoStart={true}
+                          renderer={(props) => {
+                            return <div>{props.seconds}</div>;
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div className={classes.difficultyContainerMobile}>
+                      <div>
+                        Score: <br></br>{" "}
+                        <span className={classes.light}>{score}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className={classes.rowOne}>
+                  <div className={classes.roundContainer}>
                     <div>
                       Round: <br></br>
                       <span className={classes.light}>{round + 1}/10</span>
                     </div>
                   </div>
-                  <div className={classes.timerContainerMobile}>
+                  <div className={classes.timerContainer}>
                     <div>
                       <Countdown
                         ref={clockRef}
@@ -336,53 +370,23 @@ const PlayPage = (props) => {
                       />
                     </div>
                   </div>
-                  <div className={classes.difficultyContainerMobile}>
+                  <div className={classes.difficultyContainer}>
                     <div>
                       Score: <br></br>{" "}
                       <span className={classes.light}>{score}</span>
                     </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <div className={classes.rowOne}>
-                <div className={classes.roundContainer}>
-                  <div>
-                    Round: <br></br>
-                    <span className={classes.light}>{round + 1}/10</span>
-                  </div>
-                </div>
-                <div className={classes.timerContainer}>
-                  <div>
-                    <Countdown
-                      ref={clockRef}
-                      controlled={false}
-                      intervalDelay={1000}
-                      onComplete={nextRound}
-                      date={Date.now() + 8000}
-                      autoStart={true}
-                      renderer={(props) => {
-                        return <div>{props.seconds}</div>;
-                      }}
-                    />
-                  </div>
-                </div>
-                <div className={classes.difficultyContainer}>
-                  <div>
-                    Score: <br></br>{" "}
-                    <span className={classes.light}>{score}</span>
-                  </div>
-                </div>
-              </div>
-            )
-          }
-        </Media>
-      ) : (
-        <div></div>
-      )}
+              )
+            }
+          </Media>
+        ) : (
+          <div></div>
+        )}
 
-      <div className={classes.rowTwo}>{display}</div>
-    </div>
+        <div className={classes.rowTwo}>{display}</div>
+      </div>
+    </>
   );
 };
 
