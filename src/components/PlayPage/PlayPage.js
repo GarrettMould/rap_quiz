@@ -75,7 +75,7 @@ const PlayPage = (props) => {
                   West song. Choose the correct song before the timer runs outs!
                 </div>
                 <div className={classes.buttonRow}>
-                  <Button onClick={startGame} className={classes.btnPlay}>
+                  <Button onClick={startGame} className={classes.btnPlayMobile}>
                     Start Game
                   </Button>
                 </div>
@@ -310,7 +310,6 @@ const PlayPage = (props) => {
 
   return (
     <>
-      <HeaderBorder></HeaderBorder>
       <div className={classes.container}>
         {playing ? (
           <Media queries={{ small: { maxWidth: 599 } }}>

@@ -5,7 +5,8 @@ import KanyeLogo from "../../elements/KanyeLogo/KanyeLogo";
 import AlbumBanner from "../../elements/AlbumBanner/AlbumBanner";
 import AlbumLines from "../../Images/AlbumLines.svg";
 import AlbumLinesPNG from "../../Images/AlbumLines.png";
-import HeaderBorder from "../../elements/HeaderBorder/HeaderBorder";
+import YeezusTheme from "../../Images/YeezusTheme.svg";
+import YeezusThemeDesktop from "../../Images/YeezusThemeDesktop.svg";
 
 const HomePage = (props) => {
   return (
@@ -13,21 +14,22 @@ const HomePage = (props) => {
       {(matches) =>
         matches.small ? (
           <>
-            <HeaderBorder></HeaderBorder>
             <div className={classes.container}>
               <div className={classes.rowOne}>
                 <HomePageMessage startGame={props.startGame}></HomePageMessage>
               </div>
-              <img src={AlbumLinesPNG}></img>
+              <img src={YeezusTheme}></img>
             </div>
           </>
         ) : (
-          <div className={classes.container}>
-            <div className={classes.rowOne}>
-              <HomePageMessage startGame={props.startGame}></HomePageMessage>
-              <KanyeLogo></KanyeLogo>
+          <>
+            <div className={classes.containerDesktop}>
+              <div className={classes.rowOne}>
+                <HomePageMessage startGame={props.startGame}></HomePageMessage>
+                <img src={YeezusThemeDesktop}></img>
+              </div>
             </div>
-          </div>
+          </>
         )
       }
     </Media>

@@ -37,7 +37,9 @@ const Footer = (props) => {
                 </Link>
                 <div className={classes.footerIcons}>
                   <div className={classes.icon}>
-                    <GithubLogo size={32}></GithubLogo>
+                    <a target="_blank" href="https://github.com/GarrettMould">
+                      <GithubLogo size={32}></GithubLogo>
+                    </a>
                   </div>
                   <div className={classes.icon}>
                     <DribbbleLogo size={32}></DribbbleLogo>

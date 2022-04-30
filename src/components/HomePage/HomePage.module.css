@@ -4,6 +4,12 @@
   flex-direction: column;
 }
 
+.containerDesktop {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
 .rowOne {
   display: flex;
   flex-direction: row;

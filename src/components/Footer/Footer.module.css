@@ -5,8 +5,7 @@
 }
 
 .container {
-  padding: 3% 5%;
-  border-top: 3px solid var(--color-secondary);
+  padding: 4% 5%;
 }
 
 .navbarHeader {

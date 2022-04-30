@@ -9,7 +9,7 @@ import Header from "../components/Header/Header";
 import HomePage from "../components/HomePage/HomePage";
 import PlayPage from "../components/PlayPage/PlayPage";
 import Footer from "../components/Footer/Footer";
-
+import HeaderBorder from "../elements/HeaderBorder/HeaderBorder";
 import { questions } from "../Sharede/Shared";
 import KanyeWestBound2 from "../Audio/Kanye_West_Bound_2.mp3";
 
@@ -30,6 +30,7 @@ class App extends Component {
     return (
       <div className={classes.app}>
         <Header siteTitle={this.state.siteTitle}></Header>
+        <HeaderBorder></HeaderBorder>
         <Routes>
           <Route
             path="/"

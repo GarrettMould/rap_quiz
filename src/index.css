@@ -14,12 +14,12 @@ code {
 
 :root {
   --background-color: #121212;
-  --color-primary: white;
-  --color-secondary: #bb86fc;
-  --color-variant-one: #853082;
-  --color-variant-two: #f2274c;
-  --color-variant-three: #f58b57;
-  --color-variant-four: #0202f7;
+  --color-primary: hsl(210, 100%, 100%);
+  --color-secondary: #f20505;
+  --color-variant-one: #fdfeff;
+  --color-variant-two: #fdfeff;
+  --color-variant-three: #fdfeff;
+  --color-variant-four: #fdfeff;
   --college-dropout: #411218;
   --late-registration: #c3ab14;
   --graduation: #853082;
@@ -29,4 +29,6 @@ code {
   --life-of-pablo: #f58b57;
   --ye: #5c7ca4;
   --jesus-is-king: #0202f7;
+  --correct-answer: #24f131;
+  --incorrect-answer: #f20505;
 }

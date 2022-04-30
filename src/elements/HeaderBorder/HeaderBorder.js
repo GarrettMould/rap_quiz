@@ -1,6 +1,12 @@
-import HeaderBorderPic from "../../Images/HeaderBorder.png";
+import SoundWave from "../../Images/SoundWave.svg";
+import classes from "./HeaderBorder.module.css";
+
 const HeaderBorder = (props) => {
-  return <img src={HeaderBorderPic}></img>;
+  return (
+    <div className={classes.container}>
+      <img src={SoundWave}></img>
+    </div>
+  );
 };
 
 export default HeaderBorder;
