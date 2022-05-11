@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className={classes.app}>
         <Header siteTitle={this.state.siteTitle}></Header>
-        <HeaderBorder></HeaderBorder>
+
         <Routes>
           <Route
             path="/"

@@ -57,10 +57,10 @@
 }
 
 .buttonMobile {
-  background-color: var(--background);
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   outline: none;
-  border: 2px solid var(--color-secondary);
+  border: 2px solid transparent;
   font-weight: 600;
 }
 
@@ -69,5 +69,5 @@
 .buttonMobile:focus {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  border: 2px solid transparent;
 }

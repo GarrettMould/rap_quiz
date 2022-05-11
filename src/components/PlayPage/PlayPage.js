@@ -179,7 +179,8 @@ const PlayPage = (props) => {
                   All Finished!
                 </div>
                 <div className={classes.totalScoreMobile}>
-                  Total Score: {score} / 10
+                  <span className={classes.boldScoreText}>Total Score:</span>{" "}
+                  &nbsp; {score} / 10
                 </div>
                 <div className={classes.buttonRow}>
                   <Button onClick={playAgain} className={classes.btnPlay}>
@@ -193,7 +194,10 @@ const PlayPage = (props) => {
               <div className={classes.scoreCardFormat}>
                 <div className={classes.finishedMessage}>All Finished!</div>
                 <div className={classes.totalScore}>
-                  Total Score: {score} / 10
+                  <span className={classes.boldScoreText}>
+                    Total Score: &nbsp;
+                  </span>{" "}
+                  {score} / 10
                 </div>
                 <div className={classes.buttonRow}>
                   <Button onClick={playAgain} className={classes.btnPlay}>

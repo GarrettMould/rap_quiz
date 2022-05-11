@@ -19,10 +19,10 @@ const Footer = (props) => {
                 </Link>
                 <div className={classes.footerIcons}>
                   <div className={classes.iconMobile}>
-                    <GithubLogo size={20}></GithubLogo>
+                    <GithubLogo size={25}></GithubLogo>
                   </div>
                   <div className={classes.iconMobile}>
-                    <DribbbleLogo size={20}></DribbbleLogo>
+                    <DribbbleLogo size={25}></DribbbleLogo>
                   </div>
                 </div>
               </Navbar>

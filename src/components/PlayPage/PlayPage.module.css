@@ -1,6 +1,6 @@
 /* Tablet and Desktop */
 .container {
-  padding: 3% 5% 5% 5%;
+  padding: 7% 5% 5% 5%;
   height: 85vh;
 }
 
@@ -56,6 +56,10 @@
 .totalScore {
   color: var(--color-primary);
   font-size: 1.5rem;
+}
+
+.boldScoreText {
+  font-weight: 500;
 }
 
 .buttonRow {
@@ -237,6 +241,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 2%;
 }
 .rowOneMobile {
   margin-top: 3%;
@@ -253,12 +258,12 @@
 
 .buttonMobile {
   width: 100%;
-  margin: 1%;
+  margin-bottom: 3%;
   height: 70px;
   background-color: var(--background-color);
   outline: none !important;
   box-shadow: none !important;
-  border: 3px solid var(--color-variant-four);
+  border: 3px solid var(--color-primary);
   font-weight: 600;
 }
 
@@ -267,7 +272,7 @@
 .buttonCorrectMobile:focus,
 .buttonCorrectMobile:active {
   width: 100%;
-  margin: 1%;
+  margin-bottom: 3%;
   height: 70px;
   background-color: var(--background-color);
   outline: none !important;
@@ -281,7 +286,7 @@
 .buttonIncorrectMobile:focus,
 .buttonIncorrectMobile:active {
   width: 100%;
-  margin: 1%;
+  margin-bottom: 3%;
   height: 70px;
   background-color: var(--background-color);
   outline: none !important;
