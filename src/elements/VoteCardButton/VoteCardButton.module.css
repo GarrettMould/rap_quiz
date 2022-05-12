@@ -1,0 +1,7 @@
+.voteButton {
+  background-color: #121212;
+  color: var(--color-primary);
+  font-weight: 500;
+  border: none;
+  outline: none;
+}
