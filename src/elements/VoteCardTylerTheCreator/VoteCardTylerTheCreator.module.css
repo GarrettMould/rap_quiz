@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.voteCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323131;
+  opacity: 92%;
+  width: 90%;
+  height: 400px;
+}
+
+.voteCardTitle {
+  text-align: center;
+  font-size: 200%;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.albumOne {
+  width: 100px;
+  height: 100px;
+  background-color: var(--tyler-wolf-primary);
+  border: 10px solid var(--tyler-wolf-secondary);
+}
+
+.albumTwo {
+  width: 100px;
+  height: 100px;
+  background-color: var(--tyler-cherrybomb-primary);
+  border: 10px solid var(--tyler-cherrybomb-secondary);
+}
+
+.albumThree {
+  width: 100px;
+  height: 100px;
+  background-color: var(--tyler-igor-primary);
+  border: 10px solid var(--tyler-igor-secondary);
+}
+
+.albumFour {
+  width: 100px;
+  height: 100px;
+  background-color: var(--tyler-cmiygl-primary);
+  border: 10px solid var(--tyler-cmiygl-secondary);
+}

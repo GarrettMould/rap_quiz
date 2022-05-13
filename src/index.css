@@ -39,4 +39,45 @@ code {
   --mac-miller-divine-secondary: #ffffffef;
   --mac-miller-circles-primary: #aeadad;
   --mac-miller-circles-secondary: #ffffffef;
+  --tyler-wolf-primary: #dd3207;
+  --tyler-wolf-secondary: #f4c32b;
+  --tyler-cherrybomb-primary: #ca1212;
+  --tyler-cherrybomb-secondary: #f37faa;
+  --tyler-igor-primary: #f4b4cc;
+  --tyler-igor-secondary: #000000;
+  --tyler-cmiygl-primary: #b9eeb7;
+  --tyler-cmiygl-secondary: #d8d089;
+}
+
+[data-artist="mac"] {
+  --album-one-primary: #f4c32b;
+  --album-one-secondary: #301efc;
+  --album-two-primary: #000000;
+  --album-two-secondary: #d40e81ec;
+  --album-three-primary: #e7bee5ec;
+  --album-three-secondary: #ffffffef;
+  --album-four-primary: #aeadad;
+  --album-four-secondary: #ffffffef;
+}
+
+[data-artist="tyler"] {
+  --album-one-primary: #f4c32b;
+  --album-one-secondary: #301efc;
+  --album-two-primary: #000000;
+  --album-two-secondary: #d40e81ec;
+  --album-three-primary: #e7bee5ec;
+  --album-three-secondary: #ffffffef;
+  --album-four-primary: #aeadad;
+  --album-four-secondary: #ffffffef;
+}
+
+[data-artist="tyler"] {
+  --album-one-primary: #f4c32b;
+  --album-one-secondary: #301efc;
+  --album-two-primary: #000000;
+  --album-two-secondary: #d40e81ec;
+  --album-three-primary: #e7bee5ec;
+  --album-three-secondary: #ffffffef;
+  --album-four-primary: #aeadad;
+  --album-four-secondary: #ffffffef;
 }
