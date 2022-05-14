@@ -14,7 +14,7 @@ const VoteCardResults = (props) => {
         <Poll
           customStyles={{
             theme: "white",
-            questionColor: "#f20505e1",
+            questionColor: "rgba(255, 255, 255, 0.854)",
             questionBold: true,
           }}
           question={pollQuestion}

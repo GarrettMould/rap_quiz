@@ -1,12 +1,12 @@
 import { Card, Row, Col } from "react-bootstrap";
 
 import VoteCardButton from "../VoteCardButton/VoteCardButton";
-import classes from "./VoteCardMacMiller.module.css";
-const VoteCardMacMiller = (props) => {
+import classes from "./VoteCardKendrickLamar.module.css";
+const VoteCardKendrickLamar = (props) => {
   return (
     <div className={classes.container}>
       <Card className={classes.voteCard}>
-        <div className={classes.voteCardTitle}>Mac Miller</div>
+        <div className={classes.voteCardTitle}>Kendrick Lamar</div>
         <div className={classes.container}>
           <Row className="mb-4">
             <Col>
@@ -40,4 +40,4 @@ const VoteCardMacMiller = (props) => {
   );
 };
 
-export default VoteCardMacMiller;
+export default VoteCardKendrickLamar;

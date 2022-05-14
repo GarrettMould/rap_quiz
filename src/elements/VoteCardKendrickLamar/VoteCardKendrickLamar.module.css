@@ -32,27 +32,27 @@
 .albumOne {
   width: 100px;
   height: 100px;
-  background-color: var(--mac-miller-faces-primary);
-  border: 10px solid var(--mac-miller-faces-secondary);
+  background-color: var(--kendrick-gkmc-primary);
+  border: 10px solid var(--kendrick-gkmc-secondary);
 }
 
 .albumTwo {
   width: 100px;
   height: 100px;
-  background-color: var(--mac-miller-bestdayever-primary);
-  border: 10px solid var(--mac-miller-bestdayever-secondary);
+  background-color: var(--kendrick-tpab-primary);
+  border: 10px solid var(--kendrick-tpab-secondary);
 }
 
 .albumThree {
   width: 100px;
   height: 100px;
-  background-color: var(--mac-miller-divine-primary);
-  border: 10px solid var(--mac-miller-divine-secondary);
+  background-color: var(--kendrick-damn-primary);
+  border: 10px solid var(--kendrick-damn-secondary);
 }
 
 .albumFour {
   width: 100px;
   height: 100px;
-  background-color: var(--mac-miller-circles-primary);
-  border: 10px solid var(--mac-miller-circles-secondary);
+  background-color: var(--kendrick-mrmorale-primary);
+  border: 10px solid var(--kendrick-mrmorale-secondary);
 }

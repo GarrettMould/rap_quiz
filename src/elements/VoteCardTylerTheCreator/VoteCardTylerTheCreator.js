@@ -37,7 +37,6 @@ const VoteCardTylerTheCreator = (props) => {
             </Col>
           </Row>
         </div>
-        <VoteCardButton></VoteCardButton>
       </Card>
     </div>
   );
