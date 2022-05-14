@@ -1,10 +1,8 @@
 import { Card, Row, Col } from "react-bootstrap";
-import { useState } from "react";
 
 import VoteCardButton from "../VoteCardButton/VoteCardButton";
 import classes from "./VoteCardMacMiller.module.css";
 const VoteCardMacMiller = (props) => {
-  const [artist, setArtist] = "mac";
   return (
     <div className={classes.container}>
       <Card className={classes.voteCard}>

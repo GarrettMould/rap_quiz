@@ -12,10 +12,14 @@ code {
     monospace;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #f20505e1 !important;
+}
+
 :root {
   --background-color: #121212;
   --color-primary: rgba(255, 255, 255, 0.854);
-  --color-secondary: rgba(242, 5, 5, 0.882);
+  --color-secondary: #f20505e1;
   --color-variant-one: #fdfeff;
   --color-variant-two: #fdfeff;
   --color-variant-three: #fdfeff;
@@ -47,37 +51,4 @@ code {
   --tyler-igor-secondary: #000000;
   --tyler-cmiygl-primary: #b9eeb7;
   --tyler-cmiygl-secondary: #d8d089;
-}
-
-[data-artist="mac"] {
-  --album-one-primary: #f4c32b;
-  --album-one-secondary: #301efc;
-  --album-two-primary: #000000;
-  --album-two-secondary: #d40e81ec;
-  --album-three-primary: #e7bee5ec;
-  --album-three-secondary: #ffffffef;
-  --album-four-primary: #aeadad;
-  --album-four-secondary: #ffffffef;
-}
-
-[data-artist="tyler"] {
-  --album-one-primary: #f4c32b;
-  --album-one-secondary: #301efc;
-  --album-two-primary: #000000;
-  --album-two-secondary: #d40e81ec;
-  --album-three-primary: #e7bee5ec;
-  --album-three-secondary: #ffffffef;
-  --album-four-primary: #aeadad;
-  --album-four-secondary: #ffffffef;
-}
-
-[data-artist="tyler"] {
-  --album-one-primary: #f4c32b;
-  --album-one-secondary: #301efc;
-  --album-two-primary: #000000;
-  --album-two-secondary: #d40e81ec;
-  --album-three-primary: #e7bee5ec;
-  --album-three-secondary: #ffffffef;
-  --album-four-primary: #aeadad;
-  --album-four-secondary: #ffffffef;
 }

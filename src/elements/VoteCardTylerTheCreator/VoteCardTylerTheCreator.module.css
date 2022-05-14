@@ -11,12 +11,14 @@
   background-color: #323131;
   opacity: 92%;
   width: 90%;
-  height: 400px;
+  height: 420px;
 }
 
 .voteCardTitle {
+  padding-top: 5%;
+  padding-bottom: 8%;
   text-align: center;
-  font-size: 200%;
+  font-size: 170%;
   font-weight: 600;
 }
 
