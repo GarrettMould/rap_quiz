@@ -18,7 +18,7 @@
   padding-top: 8%;
   padding-bottom: 15%;
   text-align: center;
-  font-size: 170%;
+  font-size: 200%;
   font-weight: 600;
 }
 
@@ -30,29 +30,29 @@
 }
 
 .albumOne {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-color: var(--tyler-wolf-primary);
-  border: 10px solid var(--tyler-wolf-secondary);
+  border: 12px solid var(--tyler-wolf-secondary);
 }
 
 .albumTwo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-color: var(--tyler-cherrybomb-primary);
-  border: 10px solid var(--tyler-cherrybomb-secondary);
+  border: 12px solid var(--tyler-cherrybomb-secondary);
 }
 
 .albumThree {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-color: var(--tyler-igor-primary);
-  border: 10px solid var(--tyler-igor-secondary);
+  border: 12px solid var(--tyler-igor-secondary);
 }
 
 .albumFour {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-color: var(--tyler-cmiygl-primary);
-  border: 10px solid var(--tyler-cmiygl-secondary);
+  border: 12px solid var(--tyler-cmiygl-secondary);
 }
