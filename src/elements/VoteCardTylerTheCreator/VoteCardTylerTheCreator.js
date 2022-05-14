@@ -10,27 +10,27 @@ const VoteCardTylerTheCreator = (props) => {
       <Card className={classes.voteCard}>
         <div className={classes.voteCardTitle}>Tyler, the Creator</div>
         <div className={classes.container}>
-          <Row className="mb-4">
-            <Col>
+          <Row className="mb-3">
+            <Col className="m-1">
               {" "}
               <div className={classes.albumContainer}>
                 <div className={classes.albumOne}></div>
               </div>
             </Col>
-            <Col>
+            <Col className="m-1">
               <div className={classes.albumContainer}>
                 <div className={classes.albumTwo}></div>
               </div>
             </Col>
           </Row>
-          <Row className="mb-4">
-            <Col>
+          <Row className="mb-3">
+            <Col className="m-1">
               {" "}
               <div className={classes.albumContainer}>
                 <div className={classes.albumThree}></div>
               </div>
             </Col>
-            <Col>
+            <Col className="m-1">
               <div className={classes.albumContainer}>
                 <div className={classes.albumFour}></div>
               </div>
