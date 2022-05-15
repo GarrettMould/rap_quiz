@@ -23,7 +23,7 @@
   align-items: center;
 }
 .albumName {
-  font-size: 130%;
+  font-size: 110%;
   font-weight: 500;
 }
 
@@ -32,13 +32,14 @@
   flex-direction: column;
   align-items: center;
   background-color: #323131;
+
   opacity: 92%;
   width: 90%;
   height: 500px;
 }
 
 .voteCardTitle {
-  padding-top: 5%;
+  padding-top: 7%;
   padding-bottom: 10%;
   text-align: center;
   font-size: 200%;
@@ -53,28 +54,28 @@
 }
 
 .albumOne {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: var(--tyler-igor-primary);
-  border: 8px solid var(--tyler-igor-secondary);
+  border: 7px solid var(--tyler-igor-secondary);
 }
 
 .albumTwo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: var(--mac-miller-circles-primary);
-  border: 8px solid var(--mac-miller-circles-secondary);
+  border: 7px solid var(--mac-miller-circles-secondary);
 }
 
 .albumThree {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: var(--kendrick-damn-primary);
-  border: 8px solid var(--kendrick-damn-secondary);
+  border: 7px solid var(--kendrick-damn-secondary);
 }
 
 .instructionsText {
-  padding-top: 2%;
-  font-size: 150%;
+  padding-top: 1rem;
+  font-size: 130%;
   font-weight: 600;
 }

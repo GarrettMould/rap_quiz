@@ -43,17 +43,17 @@
 
 .mainTextMobile {
   font-size: 3.75rem;
-  line-height: 5rem;
+  line-height: 4.75rem;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 6%;
+  margin-bottom: 5%;
 }
 
 .subTextMobile {
   font-size: 1.75rem;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 6%;
+  margin-bottom: 8%;
 }
 
 .buttonMobile {
