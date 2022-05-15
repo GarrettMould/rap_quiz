@@ -42,7 +42,7 @@
 }
 
 .mainTextMobile {
-  font-size: 4rem;
+  font-size: 3.75rem;
   line-height: 5rem;
   text-align: center;
   font-weight: 700;
@@ -50,7 +50,7 @@
 }
 
 .subTextMobile {
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-align: center;
   font-weight: 400;
   margin-bottom: 6%;
