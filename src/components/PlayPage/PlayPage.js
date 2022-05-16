@@ -351,32 +351,34 @@ const PlayPage = (props) => {
                   </div>
                 </div>
               ) : (
-                <div className={classes.rowOne}>
-                  <div className={classes.roundContainer}>
-                    <div>
-                      Round: <br></br>
-                      <span className={classes.light}>{round + 1}/10</span>
+                <div className={classes.rowOneContainerDesktop}>
+                  <div className={classes.rowOne}>
+                    <div className={classes.roundContainer}>
+                      <div>
+                        Round: <br></br>
+                        <span className={classes.light}>{round + 1}/10</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className={classes.timerContainer}>
-                    <div>
-                      <Countdown
-                        ref={clockRef}
-                        controlled={false}
-                        intervalDelay={1000}
-                        onComplete={nextRound}
-                        date={Date.now() + 8000}
-                        autoStart={true}
-                        renderer={(props) => {
-                          return <div>{props.seconds}</div>;
-                        }}
-                      />
+                    <div className={classes.timerContainer}>
+                      <div>
+                        <Countdown
+                          ref={clockRef}
+                          controlled={false}
+                          intervalDelay={1000}
+                          onComplete={nextRound}
+                          date={Date.now() + 8000}
+                          autoStart={true}
+                          renderer={(props) => {
+                            return <div>{props.seconds}</div>;
+                          }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className={classes.difficultyContainer}>
-                    <div>
-                      Score: <br></br>{" "}
-                      <span className={classes.light}>{score}</span>
+                    <div className={classes.difficultyContainer}>
+                      <div>
+                        Score: <br></br>{" "}
+                        <span className={classes.light}>{score}</span>
+                      </div>
                     </div>
                   </div>
                 </div>

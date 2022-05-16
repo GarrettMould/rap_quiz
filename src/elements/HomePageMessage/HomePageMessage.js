@@ -28,8 +28,8 @@ const HomePageMessage = (props) => {
             </Container>
           </div>
         ) : (
-          <div className={classes.container}>
-            <Container>
+          <div className={classes.containerDesktop}>
+            <div>
               <div className={classes.mainText}>Welcome to Kanye Quiz</div>
               <div className={classes.subText}>
                 The only site where you can truly prove your standom
@@ -39,7 +39,7 @@ const HomePageMessage = (props) => {
                   Start Quiz
                 </Button>
               </Link>
-            </Container>
+            </div>
           </div>
         )
       }

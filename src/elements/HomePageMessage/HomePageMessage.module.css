@@ -1,14 +1,14 @@
 /* Tablet and Desktop */
-.container {
+.containerDesktop {
   width: 50%;
-  margin-right: 10%;
+  margin-right: 7%;
 }
 
 .mainText {
   font-size: 4rem;
   line-height: 5.5rem;
   font-weight: 700;
-  margin-bottom: 4%;
+  margin-bottom: 5%;
 }
 
 .subText {
@@ -19,9 +19,11 @@
 
 .button {
   width: 40%;
+  height: 50px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
   outline: none;
+  font-size: 110%;
   border: 2px solid transparent;
   font-weight: 600;
 }

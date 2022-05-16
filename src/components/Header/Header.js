@@ -7,31 +7,29 @@ import HomePageNav from "../../elements/HomePageNav/HomePageNav";
 
 const Header = (props) => {
   return (
-    <div className={classes.container}>
-      <Container>
-        <Media queries={{ small: { maxWidth: 599 } }}>
-          {(matches) =>
-            matches.small ? (
-              <Navbar className={classes.navbarHeader}>
-                <Link to="/">
-                  <div className={classes.siteTitleMobile}>
-                    {props.siteTitle}
-                  </div>
-                </Link>
-                <HomePageNav></HomePageNav>
-              </Navbar>
-            ) : (
-              <Navbar className={classes.navbarHeader}>
-                <Link to="/">
-                  <div className={classes.siteTitle}>{props.siteTitle}</div>
-                </Link>
-                <HomePageNav></HomePageNav>
-              </Navbar>
-            )
-          }
-        </Media>
-      </Container>
-    </div>
+    <Media queries={{ small: { maxWidth: 599 } }}>
+      {(matches) =>
+        matches.small ? (
+          <div className={classes.containerMobile}>
+            <Navbar className={classes.navbarHeader}>
+              <Link to="/">
+                <div className={classes.siteTitleMobile}>{props.siteTitle}</div>
+              </Link>
+              <HomePageNav></HomePageNav>
+            </Navbar>
+          </div>
+        ) : (
+          <div className={classes.containerDesktop}>
+            <Navbar className={classes.navbarHeader}>
+              <Link to="/">
+                <div className={classes.siteTitle}>{props.siteTitle}</div>
+              </Link>
+              <HomePageNav></HomePageNav>
+            </Navbar>
+          </div>
+        )
+      }
+    </Media>
   );
 };
 

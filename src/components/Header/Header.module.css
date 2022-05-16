@@ -1,6 +1,6 @@
 /* Tablet and Desktop */
-.container {
-  padding: 3% 5% 3% 5%;
+.containerDesktop {
+  padding: 2% 5% 2% 5%;
   border-bottom: 3px solid var(--color-secondary);
 }
 
@@ -15,6 +15,11 @@
 }
 
 /* Mobile */
+
+.containerMobile {
+  padding: 3% 7% 3% 7%;
+  border-bottom: 3px solid var(--color-secondary);
+}
 
 .siteTitleMobile {
   font-size: 1.2rem;

@@ -1,3 +1,81 @@
+/* Desktop */
+
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+}
+.rowContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.albumContainer {
+  margin-right: 15px;
+}
+.albumNameContainer {
+  display: flex;
+  align-items: center;
+}
+.albumNameDesktop {
+  font-size: 150%;
+  font-weight: 500;
+}
+
+.voteCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323131;
+  opacity: 92%;
+  height: 500px;
+}
+
+.voteCardTitleDesktop {
+  padding-top: 7%;
+  padding-bottom: 8%;
+  text-align: center;
+  font-size: 240%;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.albumOneDesktop {
+  width: 85px;
+  height: 85px;
+  background-color: var(--tyler-igor-primary);
+  border: 8px solid var(--tyler-igor-secondary);
+}
+
+.albumTwoDesktop {
+  width: 85px;
+  height: 85px;
+  background-color: var(--mac-miller-circles-primary);
+  border: 8px solid var(--mac-miller-circles-secondary);
+}
+
+.albumThreeDesktop {
+  width: 85px;
+  height: 85px;
+  background-color: var(--kendrick-damn-primary);
+  border: 8px solid var(--kendrick-damn-secondary);
+}
+
+.instructionsText {
+  padding-top: 1rem;
+  font-size: 130%;
+  font-weight: 600;
+}
+
+/* Mobile */
+
 .container {
   width: 100%;
   display: flex;

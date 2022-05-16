@@ -1,3 +1,15 @@
+/* Desktop */
+
+.voteCardTitleDesktop {
+  padding-top: 8%;
+  padding-bottom: 10%;
+  text-align: center;
+  font-size: 200%;
+  font-weight: 600;
+}
+
+/* Mobile */
+
 .container {
   width: 100%;
   display: flex;
