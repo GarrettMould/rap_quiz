@@ -21,9 +21,6 @@ const Footer = (props) => {
                   <div className={classes.iconMobile}>
                     <GithubLogo size={25}></GithubLogo>
                   </div>
-                  <div className={classes.iconMobile}>
-                    <DribbbleLogo size={25}></DribbbleLogo>
-                  </div>
                 </div>
               </Navbar>
             </Container>

@@ -6,6 +6,10 @@
   font-weight: 600;
 }
 
+.contentContainerMobile {
+  padding: 1%;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -39,29 +43,29 @@
 }
 
 .albumOne {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--mac-miller-faces-primary);
-  border: 12px solid var(--mac-miller-faces-secondary);
+  border: 11px solid var(--mac-miller-faces-secondary);
 }
 
 .albumTwo {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--mac-miller-bestdayever-primary);
-  border: 12px solid var(--mac-miller-bestdayever-secondary);
+  border: 11px solid var(--mac-miller-bestdayever-secondary);
 }
 
 .albumThree {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--mac-miller-divine-primary);
-  border: 12px solid var(--mac-miller-divine-secondary);
+  border: 11px solid var(--mac-miller-divine-secondary);
 }
 
 .albumFour {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--mac-miller-circles-primary);
-  border: 12px solid var(--mac-miller-circles-secondary);
+  border: 11px solid var(--mac-miller-circles-secondary);
 }

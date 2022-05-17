@@ -6,6 +6,10 @@
   font-weight: 600;
 }
 
+.contentContainerMobile {
+  padding: 1%;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -26,7 +30,7 @@
   padding-top: 8%;
   padding-bottom: 15%;
   text-align: center;
-  font-size: 200%;
+  font-size: 180%;
   font-weight: 600;
 }
 
@@ -38,29 +42,29 @@
 }
 
 .albumOne {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--tyler-wolf-primary);
-  border: 12px solid var(--tyler-wolf-secondary);
+  border: 11px solid var(--tyler-wolf-secondary);
 }
 
 .albumTwo {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--tyler-cherrybomb-primary);
-  border: 12px solid var(--tyler-cherrybomb-secondary);
+  border: 11px solid var(--tyler-cherrybomb-secondary);
 }
 
 .albumThree {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--tyler-igor-primary);
-  border: 12px solid var(--tyler-igor-secondary);
+  border: 11px solid var(--tyler-igor-secondary);
 }
 
 .albumFour {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: var(--tyler-cmiygl-primary);
-  border: 12px solid var(--tyler-cmiygl-secondary);
+  border: 11px solid var(--tyler-cmiygl-secondary);
 }

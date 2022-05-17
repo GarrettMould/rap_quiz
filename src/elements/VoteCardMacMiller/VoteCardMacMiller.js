@@ -10,34 +10,36 @@ const VoteCardMacMiller = (props) => {
         matches.small ? (
           <div className={classes.container}>
             <Card className={classes.voteCard}>
-              <div className={classes.voteCardTitle}>Mac Miller</div>
-              <div className={classes.container}>
-                <Row className="mb-3">
-                  <Col className="m-1">
-                    {" "}
-                    <div className={classes.albumContainer}>
-                      <div className={classes.albumOne}></div>
-                    </div>
-                  </Col>
-                  <Col className="m-1">
-                    <div className={classes.albumContainer}>
-                      <div className={classes.albumTwo}></div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="mb-3">
-                  <Col className="m-1">
-                    {" "}
-                    <div className={classes.albumContainer}>
-                      <div className={classes.albumThree}></div>
-                    </div>
-                  </Col>
-                  <Col className="m-1">
-                    <div className={classes.albumContainer}>
-                      <div className={classes.albumFour}></div>
-                    </div>
-                  </Col>
-                </Row>
+              <div className={classes.contentContainerMobile}>
+                <div className={classes.voteCardTitle}>Mac Miller</div>
+                <div className={classes.container}>
+                  <Row className="mb-3">
+                    <Col className="m-1">
+                      {" "}
+                      <div className={classes.albumContainer}>
+                        <div className={classes.albumOne}></div>
+                      </div>
+                    </Col>
+                    <Col className="m-1">
+                      <div className={classes.albumContainer}>
+                        <div className={classes.albumTwo}></div>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="m-1">
+                      {" "}
+                      <div className={classes.albumContainer}>
+                        <div className={classes.albumThree}></div>
+                      </div>
+                    </Col>
+                    <Col className="m-1">
+                      <div className={classes.albumContainer}>
+                        <div className={classes.albumFour}></div>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
               </div>
             </Card>
           </div>
