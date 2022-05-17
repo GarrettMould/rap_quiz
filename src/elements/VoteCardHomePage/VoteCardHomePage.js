@@ -40,7 +40,6 @@ const VoteCardHomePage = (props) => {
                   </div>
                 </div>
               </div>
-              <div className={classes.instructionsText}>Swipe to Vote</div>
             </Card>
           </div>
         ) : (
